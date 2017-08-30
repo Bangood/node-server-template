@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser';
 import compress from 'compression';
 import methodOverride from 'method-override';
 import cors from 'cors';
+import helmet from 'helmet';
 const app = express();
 
 // Parse HTTP request body.
@@ -20,4 +21,6 @@ app.use(compress());
 app.use(methodOverride());
 // Enable cross-origin resource sharing (CORS) with various options.
 app.use(cors());
+// Helps secure your apps by setting various HTTP headers.
+app.use(helmet());
 export default app;
