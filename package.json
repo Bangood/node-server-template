@@ -1,0 +1,31 @@
+{
+  "name": "node-server-template",
+  "version": "1.0.0",
+  "description": "nodejs server template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bangood/node-server-template.git"
+  },
+  "keywords": [
+    "nodejs",
+    "server",
+    "scaffold"
+  ],
+  "author": "Bangood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bangood/node-server-template/issues"
+  },
+  "homepage": "https://github.com/Bangood/node-server-template#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}
