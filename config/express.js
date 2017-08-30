@@ -8,6 +8,8 @@ import compress from 'compression';
 import methodOverride from 'method-override';
 import cors from 'cors';
 import helmet from 'helmet';
+
+import routes from '../routes/index.route';
 const app = express();
 
 // Parse HTTP request body.
@@ -23,4 +25,6 @@ app.use(methodOverride());
 app.use(cors());
 // Helps secure your apps by setting various HTTP headers.
 app.use(helmet());
+
+app.use('/api', routes);
 export default app;
