@@ -3,6 +3,7 @@
  */
 import app from './config/express';
 import config from './config/config';
+import logger from './config/logger';
 app.listen(config.port, () => {
-  console.log(`server started on port ${config.port} (${config.env})`);
+  logger.info(`server started on port ${config.port} (${config.env})`);
 });
