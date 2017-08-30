@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import compress from 'compression';
 import methodOverride from 'method-override';
+import cors from 'cors';
 const app = express();
 
 // Parse HTTP request body.
@@ -17,4 +18,6 @@ app.use(cookieParser());
 app.use(compress());
 // Override HTTP methods using header.
 app.use(methodOverride());
+// Enable cross-origin resource sharing (CORS) with various options.
+app.use(cors());
 export default app;
