@@ -9,6 +9,7 @@ import methodOverride from 'method-override';
 import cors from 'cors';
 import helmet from 'helmet';
 
+import config from '../config/config';
 import routes from '../routes/index.route';
 const app = express();
 
@@ -22,7 +23,9 @@ app.use(compress());
 // Override HTTP methods using header.
 app.use(methodOverride());
 // Enable cross-origin resource sharing (CORS) with various options.
-app.use(cors());
+if (config.env === 'development') {
+  app.use(cors());
+}
 // Helps secure your apps by setting various HTTP headers.
 app.use(helmet());
 
