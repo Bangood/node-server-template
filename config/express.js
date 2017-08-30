@@ -35,4 +35,13 @@ app.use(expressWinston.logger({
   winstonInstance: logger
 }));
 app.use('/api', routes);
+// error handler.
+app.use((err, req, res, next) => {
+  if (res.headersSent) {
+    return next(err);
+  }
+  res.status(500).json({
+    errMsg: 'Internal Server Error'
+  });
+});
 export default app;
