@@ -5,6 +5,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import compress from 'compression';
+import methodOverride from 'method-override';
 const app = express();
 
 // Parse HTTP request body.
@@ -14,4 +15,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 // Compress HTTP responses.
 app.use(compress());
+// Override HTTP methods using header.
+app.use(methodOverride());
 export default app;
