@@ -1,8 +1,10 @@
 /**
  * Created by pure on 2017/8/30.
  */
+import {config as dotenvConfig} from 'dotenv';
+dotenvConfig();
 const config = {
-  env: 'development',
-  port: 3001
+  env: process.env.NODE_ENV,
+  port: process.env.PORT
 };
 export default config;
