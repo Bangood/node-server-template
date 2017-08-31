@@ -4,7 +4,7 @@
   "description": "nodejs server template",
   "main": "index.js",
   "scripts": {
-    "test": "node --harmony ./node_modules/mocha/bin/_mocha tests"
+    "test": "node --harmony ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha tests"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "istanbul": "^0.4.5",
     "mocha": "^3.5.0",
     "supertest": "^3.0.0"
   },
