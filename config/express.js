@@ -9,6 +9,7 @@ import methodOverride from 'method-override';
 import cors from 'cors';
 import helmet from 'helmet';
 import expressWinston from 'express-winston';
+import httpStatus from 'http-status';
 
 import config from '../config/config';
 import routes from '../routes/index.route';
@@ -35,6 +36,10 @@ app.use(expressWinston.logger({
   winstonInstance: logger
 }));
 app.use('/api', routes);
+// catch 404
+app.use((req, res, next) => {
+  res.status(httpStatus.NOT_FOUND).send('NOT　FOUND');
+});
 // error handler.
 app.use((err, req, res, next) => {
   if (res.headersSent) {
