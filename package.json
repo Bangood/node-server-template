@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "compression": "^1.7.0",
     "cookie-parser": "^1.4.3",
@@ -51,6 +52,8 @@
     "joi": "^10.6.0",
     "method-override": "^2.3.9",
     "moment": "^2.18.1",
+    "nconf": "^0.8.4",
+    "prompt": "^1.0.0",
     "winston": "^2.3.1",
     "winston-daily-rotate-file": "^1.4.6"
   }
