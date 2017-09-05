@@ -14,7 +14,6 @@ let logger = new (winston.Logger)({
     new winston.transports.Console({
       timestamp: dateFormat,
       colorize: true,
-      level: 'verbose',
       json: false
     })
   ]
